@@ -1,52 +1,131 @@
-body{
+/* Reset */
+*{
     margin:0;
     padding:0;
-    font-family: Arial;
+    box-sizing:border-box;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f2f2f2;
+}
+
+/* Full screen center */
 .container{
     min-height:100vh;
-    width:100%;
-}
-
-.main-content{
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:80vh;
     padding:20px;
 }
 
+/* Login Box */
 .login{
     width:100%;
-    max-width:400px;
+    max-width:420px;
+    background:white;
     padding:30px;
-    border:2px solid gray;
+    border:2px solid #999;
     border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
     display:flex;
     flex-direction:column;
+    gap:15px;
 }
 
+/* Inputs */
 input{
-    padding:12px;
     width:100%;
-    margin:8px 0;
+    padding:14px;
     font-size:16px;
-    border-radius:10px;
+    border:2px solid #777;
+    border-radius:12px;
+    outline:none;
 }
 
+input:focus{
+    border-color:black;
+}
+
+/* Button */
 button{
     width:100%;
-    padding:12px;
-    font-size:18px;
-    border-radius:20px;
+    padding:14px;
+    font-size:20px;
     background:black;
     color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
+button:hover{
+    opacity:0.85;
+}
+
+/* Status Text */
+.status{
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.right-credentials{
+    color:green;
+}
+
+.wrong-credentials{
+    color:red;
+}
+
+/* Links */
 .options{
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
     gap:10px;
+}
+
+.options a{
+    color:#4b2aad;
+    text-decoration:none;
+    font-size:16px;
+}
+
+.options a:hover{
+    text-decoration:underline;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+    color:#555;
+}
+
+/* Mobile Responsive */
+@media (max-width:480px){
+
+    .login{
+        padding:22px;
+        border-radius:18px;
+    }
+
+    input{
+        font-size:15px;
+        padding:12px;
+    }
+
+    button{
+        font-size:18px;
+        padding:12px;
+    }
+
+    .options{
+        flex-direction:column;
+        text-align:center;
+    }
 }
