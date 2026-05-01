@@ -10,12 +10,12 @@ function checkUser() {
     console.log(password);
     var status = document.querySelector(".status");
     if (email === "testuser@email.com" && password === "testuser") {
-        status.classList.add("wrong-credentials");
-        status.classList.remove("right-credentials");
+        status.classList.add("right-credentials");
+        status.classList.remove("wrong-credentials");
         status.innerHTML = "User Verified";
     } else {
-        status.classList.remove("wrong-credentials");
-        status.classList.add("right-credentials");
+        status.classList.remove("right-credentials");
+        status.classList.add("wrong-credentials");
         status.innerHTML = "Either username or password incorrect.";
     }
 }
