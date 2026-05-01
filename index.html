@@ -1,49 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>This is my portfolio</title>
-        <meta charset="UTF-8">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <h1>Hemanth Guntuku</h1>
-        <img src="./Hemanth.jpeg" alt="Hemanth's Photo">
-        <p>
-            Myself Hemanth, I am Computer Science UG from the college of NIT Warangal, Currently Studying in 3rd year. I am a perfectionist pushes myself to 
-            be productive and being energtic. My Hobbies are creating content, learning new things and exploring.
-        </p>
-        <ul>
-            <li>
-                <h2>Education</h2>
-                <ol>
-                    <li>NIT Warangal present 2023-</li>
-                    <li>Tirumala Junior College (2021-2023)</li>
-                    <li>Sri Chaitanya Techno School (2016-2021)</li>
-                </ol>
-            </li>
-            <li>
-                <h2>Work Experience</h2>
-                <ol>
-                    <li>Worked as a senior developer in Microsoft(2023-2025)</li>
-                    <li>Worked as a junior developer in ValueLabs(2021-2023)</li>
-                </ol>
-            </li>
-            <li>
-                <h2>Skills</h2>
-                <ol>
-                    <li>C++, Java, Python</li>
-                    <li>Node, express, Mongo, SQL, Postman</li>
-                </ol>
-            </li>
-            <li>
-                <h2>Certifications</h2>
-                <ol>
-                    <li>Got a certificate of completion from Oracle on AI foundation course</li>
-                    <li>Got a certificate of completion from Udemy on Web development</li>
-                </ol>
-            </li>
-        </ul>
+
+        <div class="container">
+            <!-- <div class="header">
+                <a href="./reference.html"><p>Reference</p></a>
+            </div> -->
+            <div class="main-content">
+                <div class="login">
+                    <input type="email" placeholder="Email address" class="email" onKeyDown="handle(event)">
+                    <input type="password" placeholder="Password" class="password" onKeyDown="handle(event)">
+                    <button class="btn" type="submit" onclick="checkUser()" onkeyDown="Enter">Login</button>
+                    <p class="status right-credentials wrong-credentials"></p>
+                    <div class="options">
+                        <a href="">Forgot Password</a>
+                        <a href="./signup.html">New User</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
-            ©Hemanth Guntuku
+            <p>email: testuser@email.com</p>
+            <p>pwd : testuser</p>
         </footer>
+        <script src="./script.js"></script>
     </body>
 </html>
